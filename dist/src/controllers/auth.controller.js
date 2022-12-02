@@ -14,7 +14,7 @@ class AuthServices {
                 if (userExist) {
                     return "User exist";
                 }
-                let encodePassworld = await bcrypt_1.default.hash(passworld, parseInt(process.env.BCRYPT_SALT_ROUND));
+                let encodePassworld = await bcrypt_1.default.hash(passworld, 10);
                 data.passworld = encodePassworld;
                 const newUser = await user_schema_1.default.create(data);
                 if (newUser) {

@@ -14,7 +14,7 @@ class AuthServices {
         }
         let encodePassworld = await bcrypt.hash(
           passworld,
-          parseInt(process.env.BCRYPT_SALT_ROUND)
+          10
         );
         data.passworld = encodePassworld;
         const newUser = await Users.create(data);

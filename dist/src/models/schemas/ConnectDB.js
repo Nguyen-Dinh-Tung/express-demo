@@ -32,7 +32,7 @@ const dotenv = __importStar(require("dotenv"));
 dotenv.config();
 class ConnectDB {
     async connect() {
-        await mongoose_1.default.connect(process.env.MONGODB_URL);
+        await mongoose_1.default.connect('mongodb+srv://case4:123456a@cluster0.vkbuyj0.mongodb.net/tungphich');
     }
 }
 exports.ConnectDB = ConnectDB;

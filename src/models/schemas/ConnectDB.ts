@@ -4,6 +4,6 @@ dotenv.config()
 
 export class ConnectDB {
     async connect() {
-        await mongoose.connect(process.env.MONGODB_URL);
+        await mongoose.connect('mongodb+srv://case4:123456a@cluster0.vkbuyj0.mongodb.net/tungphich');
     }
 }
